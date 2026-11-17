@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "client-audit-lite": {
+      "command": "python",
+      "args": [
+        "-B",
+        "${CLAUDE_PLUGIN_ROOT}/mcp/server.py"
+      ]
+    }
+  }
+}

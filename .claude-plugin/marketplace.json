@@ -1,0 +1,12 @@
+{
+  "name": "client-audit-lite",
+  "description": "Client Audit Lite: a free plugin that audits a web page for SEO and AI-search visibility.",
+  "owner": { "name": "eng.reem alfadly" },
+  "plugins": [
+    {
+      "name": "client-audit-lite",
+      "source": "./client-audit-lite",
+      "description": "Audit a web page for SEO and AI-search visibility from measured facts and get a scored report in Arabic or English."
+    }
+  ]
+}
