@@ -25,12 +25,12 @@ Score each category, show points lost with the reason. Use whole points. Wheneve
 - Experience basics 10: viewport 2 · readable/mobile 3 · images alt and size 3 · overlays/performance 2 (Unknown if not measured)
 - Links 5: anchor text 2 · no orphan/broken 2 · credible outbound 1
 
-**Always Unknown with this plugin's tools** (do not deduct, say so in the report): sitemap membership, internal-link reachability and orphan pages, image dimensions, intrusive overlays, broken links and page speed.
+**Always Unknown in this edition** (do not deduct, say so in the report): sitemap membership, internal-link reachability and orphan pages, image dimensions, intrusive overlays, broken links and page speed.
 
 Length figures (title, meta description, answer passages) are common heuristics, not search-engine rules; say so in the report.
 
 **Cap rule:** if category 1 scores below 8, cap the total at 60 and say why (crawl and index problems limit every other fix).
 
-**BLOCKER rule (overrides the arithmetic):** if `fetch_page` returns `noindex: true` from a directive that applies to all crawlers or to Googlebot (read the source in `robots_directives`; a noindex limited to another crawler such as Bingbot does not block Google), or `check_robots` returns `this_page_allowed: false` for `Googlebot` (with `page_path` equal to the audited path), the page cannot be indexed. Cap the total at **40** whatever the categories add up to, put that problem as finding 1, label it **BLOCKER**, and name the source (`robots_directives` entry or the `this_page_rule` line). The weights above still add to 100; only the total is capped.
+**BLOCKER rule (overrides the arithmetic):** if the page has a `noindex` (or `none`) that applies to all crawlers or to Googlebot (a noindex limited to another crawler such as Bingbot does not block Google), or robots.txt blocks the audited page for `Googlebot`, the page cannot be indexed. Cap the total at **40** whatever the categories add up to, put that problem as finding 1, label it **BLOCKER**, and name the source (the meta tag, the `X-Robots-Tag` header or the robots.txt line). The weights above still add to 100; only the total is capped.
 
 **Unknown items:** do not score them as zero and do not deduct for them. Score = full points minus *observed* losses only, so when any category is partly measured, call the total a **provisional ceiling** (it can only fall if the unknowns turn out badly). List what is missing and say how many of the 100 points could actually be measured. Never fill in performance, rankings or backlink data.
