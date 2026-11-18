@@ -41,6 +41,16 @@ The skill tries three routes in order and says which one it used:
 - Results become part of your conversation with Claude, including short excerpts of the page.
 - The site you audit sees your IP address and the user agent `ClientAuditLite/0.1` when `curl` is used.
 
+## Privacy
+
+This plugin is a set of Markdown files. It has no server and no code of its own, and its publisher does not receive, collect, store or share any data from your use of it.
+
+- **What it handles:** the page addresses you give Claude, and the content of those public pages and their robots.txt, which Claude reads while writing the report. Pages can contain personal data such as names or email addresses; the plugin reads only what the page shows and keeps nothing.
+- **Where the data goes:** the page content and the report stay in your conversation with Claude, under Anthropic's own terms and privacy policy. The audited website receives your request as described above. No other party receives anything.
+- **Retention:** the plugin keeps nothing. Anything you save, such as a report file, is saved only if you ask Claude to save it, and only where you choose.
+- **Children:** the plugin is not intended for users under 18.
+- **Questions:** open an issue at https://github.com/reemalfadly/client-audit-lite/issues.
+
 ## Limits
 
 - Claude reads the HTML the server sends. It does not run JavaScript, so a page built entirely by scripts can look nearly empty; the report says so and marks what depends on rendering as Inferred or Unknown.

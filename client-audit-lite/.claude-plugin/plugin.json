@@ -1,10 +1,11 @@
 {
   "name": "client-audit-lite",
   "displayName": "Client Audit Lite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "eng.reem alfadly"
   },
   "license": "MIT",
+  "privacyPolicyUrl": "https://github.com/reemalfadly/client-audit-lite/blob/main/client-audit-lite/README.md#privacy",
   "description": "Audit a web page for SEO and AI-search visibility from measured facts (page details, robots.txt rules for search and AI crawlers, color contrast) and get a scored report in Arabic or English."
 }
